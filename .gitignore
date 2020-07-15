@@ -1,0 +1,33 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/eclipse,java-web
+# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,java-web
+
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+### Java ###
+# Compiled class file
+*.class
+
+### Java-Web ###
+## ignoring target file
+target/

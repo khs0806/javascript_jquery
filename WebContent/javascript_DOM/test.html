@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function sub(){
+	var arr = new Array();
+	var melon = document.getElementById("melon");
+// 	arr.push(melon.nodeName + "," + melon.nodeValue);
+// 	arr.push(melon.childNodes.length);
+	
+	for (var i=0; i<melon.childNodes.length; i++){
+// 		arr.push(melon.childNodes[i].nodeValue);
+// 		arr.push(melon.childNodes[i].childNodes[0].nodeName);
+	}
+	
+	var span = melon.getElementsByTagName("span");
+	for (var i=0; i<span.length; i++){
+		arr.push(span[i].childNodes[0].nodeValue);
+	}
+	alert(arr.join("\n"));
+}
+</script>
+</head>
+<body>
+	<span id="melon">
+		<span>라<span>가</span></span>
+		<span>나</span>
+		<span>다</span>
+	</span>
+	<input type="button" value="클릭" onclick="sub()"/>
+</body>
+</html>

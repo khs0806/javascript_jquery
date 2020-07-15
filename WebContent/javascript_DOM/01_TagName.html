@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function test(){
+		// div 태그를 가져온다.
+		var div = document.getElementsByTagName("div");
+// 		alert(div.length);
+		// div 태그에 문자열을 삽입한다.
+		div[0].innerHTML = "사과";
+		div[1].innerHTML = "바나나";
+		div[2].innerHTML = "딸기";
+	}
+	function sub(){
+		var span = document.getElementsByTagName("span");
+		for (var i=0; i<span.length; i++){
+			span[i].innerHTML = "apple";
+		}
+	}
+	function fun(){
+		var font = document.getElementsByTagName("font");
+		var span = document.getElementsByTagName("span");
+		for (var i=0; span.length; i++){
+			span[i].innerHTML = "사과";
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<input type="button" value="클릭" onclick="test()">
+	<br><br>
+	
+	<font>
+		<span></span>
+		<span></span>
+		<input type="button" value="span" onclick="sub()">
+		<input type="button" value="font-span" onclick="fun()">
+	</font>
+</body>
+</html>
