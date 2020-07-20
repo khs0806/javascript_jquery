@@ -32,6 +32,5 @@ function process(){
 		var disp = document.getElementById("disp");
 		disp.innerText = xhr.responseText;
 	}
-	
-//	alert(arr.join("/n"));
+	alert(arr.join("/n"));
 }

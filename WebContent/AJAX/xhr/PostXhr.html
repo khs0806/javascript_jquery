@@ -6,7 +6,6 @@
 <script type="text/javascript" src="xhr.js"></script>
 <script type="text/javascript">
 	function toServer(){
-		alert("toserver");
 		var msg = document.getElementById("createForm").msg.value;
 		var params = 'msg=' + msg;
 		var url = "command.jsp";
@@ -16,7 +15,6 @@
 	
 	function fromServer(){
 		if (xhr.readyState==4 && xhr.status==200){
-			alert("fromServer");
 			arr.push(xhr.responseText);
 			alert(arr.join("\n"));
 			var disp = document.getElementById("disp");
