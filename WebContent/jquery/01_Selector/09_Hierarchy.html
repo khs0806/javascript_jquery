@@ -21,6 +21,12 @@
           background:#ddaa99;
       }
 </style>
+<script type="text/javascript" src="../jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#first ~ div").css("border","3px dotted #F00");	// ~ 는 모든 동생, #first의 모든 동생(div만)
+	});
+</script>
 </head>
 <body>
 	<h2>매물안내</h2>

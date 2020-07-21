@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery - 기본 필터 선택자</title>
+<script type="text/javascript" src="../jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		//	선택자 필터
+		$("p:even").css("color","red");		// 짝수 (0번지부터 0, 2, 4, 6, ...)
+		$("p:odd").css("color","green");	// 홀수
+		$("p:first").css("color","blue");
+		$("p:last").css("color","pink");
+		$("p:eq(2)").css("color","yellow");	// 번지값(인덱스)
+		
+		$(".third > li:gt(2)").css("color","red");	// 기준 인덱스보다 큰요소들
+		$(".third > li:lt(2)").css("color","blue");	// 기준 인덱스보다 작은요소들
+	});
+</script>
+</head>
+<body>
+	<p>1월</p>
+	<p>2월</p>
+	<p>3월</p>
+	<p>4월</p>
+	<p>5월</p>
+	<p>6월</p>
+	<br/><br/>
+	<div>
+		<ul class="third">
+			<li>커피</li>
+			<li>콜라</li>
+			<li>사이다</li>
+			<li>환타</li>
+			<li>우유</li>
+		</ul>
+	</div>
+</body>
+</html>

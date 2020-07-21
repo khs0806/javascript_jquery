@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery - DOM 함수</title>
+<script src="../jquery.js"></script>
+<script>
+	// DOM : 생성(createElement), 삭제(remove), 삽입(add), 수정(refresh)
+	$(function(){
+		$("#first > p").append("일등품질 일등서비수");
+		$("#first > p").append("<h3>일등품질 일등서비스</h3>");
+		
+		$("#first > ul").append("<li style='color:red;'>잡채만두</li>");	// 맨뒤 자식
+		$("#first > ul").prepend("<li style='color:blue;'>찐만두</li>");	// 맨위 자식
+		
+		$("#first > ul").after("<h2>순대</h2>");							// 동생
+		$("#first > ul").before("<h3>떡볶이</h3>");							// 형
+		
+		$("<h3>일등품질 일등서비스2</h3>").appendTo("#first > p");			// 엘리멘트 마지막에 데이터를 넣는다.			
+		$("<h3>일등품질 일등서비스3</h3>").prependTo("#first > p");
+		
+		$("<h2>순대2</h2>").insertAfter("#first > ul");						// 엘리멘트 앞에 데이터를 넣는다
+		$("<h3>떡볶이2</h3>").insertBefore("#first > ul");
+		
+	});
+	
+</script>
+</head>
+<body>
+	<div id="first">
+		안녕하세요. <br/>
+		<p> 
+			맛의 혁신을 이룩하기 위한 
+		 	우리 복채손 만두의 노력은 계속 됩니다. <br/>
+			한결같은 맛과 서비스로 여러분 한분 한분 모시고 있습니다. 
+		</p>
+		
+		<b>만두 메뉴</b>
+		<ul>
+			<li>물만두</li>
+			<li>군만두</li>
+		</ul>
+	</div>
+</body>
+</html>
