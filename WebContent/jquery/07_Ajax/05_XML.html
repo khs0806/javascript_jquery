@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JQuery AJAX</title>
+<script src="../jquery.js"></script>
+<script>
+$(function(){
+	$.ajax({
+		url:"05_XML.xml",
+		type:"get",
+		dataType:"xml",
+		success:function(data){
+			var studentList = $(data).find("student");
+// 			alert(studentList.length);
+			$(studentList).each(function(index){
+				var student = studentList.eq(index);
+				
+				var studentData = "<span>" + student.children("stdNumber").text() + "</span><br>";
+				studentData += "<span>" + student.children("stdName").text() + "</span><br>";
+				studentData += "<span>" + student.children("score").text() + "</span>";
+				
+				$("#resultDisp").append(memberData);
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<div id="resultDisp"></div>
+</body>
+</body>
+</html>
+
+
+
+

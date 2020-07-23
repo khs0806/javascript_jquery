@@ -23,7 +23,7 @@
 		$("#first > div").children("b").each(function(i,e){
 			arr.push(i + ":" + e.tagName + ":" + $(e).text());
 		});
-		
+		$("#first").find("b").css("border", "1px solid blue");	//자손(자식 포함)
 		alert(arr.join("\n"));
 	});
 </script>

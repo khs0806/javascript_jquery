@@ -17,7 +17,7 @@
 		alert("JQuery 시작입니다.");
 	}); */
 	
-	$(document).ready(function(){				// 위에 문장의 최종 끝판왕. 주로 이렇게 쓴다.
+	$.when($.ready).then(function() {			// 위에 문장의 최종 끝판왕. 주로 이렇게 쓴다.
 		alert("JQuery 시작입니다.");
 	});
 	

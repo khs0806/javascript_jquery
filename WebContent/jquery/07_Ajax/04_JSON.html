@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JQuery AJAX</title>
+<script src="../jquery.js"></script>
+<script>
+	$(function(){
+		$.ajax({
+			url:"04_JSON.txt",
+			data:"get",
+			dataType:"json",
+			success:function(data){
+				var memberList = data.member;
+				
+				$(memberList).each(function(index){
+					var member = memberList[index];
+					
+					var memberData = "<span>" + member.stdNumber + "</span><br>";
+					memberData += "<span>" + member.stdName + "</span><br>";
+					memberData += "<span>" + member.score + "</span>";
+					
+					$("#resultDisp").append(memberData);
+				});
+				
+			}
+		})
+	});
+</script>
+</head>
+<body>
+	<div id="resultDisp"></div>
+</body>
+</html>
+
+
+
+
+
+

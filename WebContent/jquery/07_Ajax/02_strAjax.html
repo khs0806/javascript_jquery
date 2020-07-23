@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JQuery AJAX</title>
+<script src="../jquery.js"></script>
+<script>
+	$(function(){
+		$.ajax({
+			url:"02_strr.txt",
+			type:"get",
+			dataType:"text",
+			success:function(data, status, xhr){
+				$("#resultDisplay").text(data);
+				alert(xhr.responseText);
+			},
+			error:function(xhr, status, message){
+				var arr = new Array();
+				arr.push("응답코드 " + xhr.status);
+				arr.push(" " + status);
+				arr.push("3 " + message);
+				alert(arr.join("\n"));
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="resultDisplay" style="color:blue;"></div>
+</body>
+</html>

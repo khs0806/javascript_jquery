@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery UI</title>
+<link rel="stylesheet" href="Start/jquery-ui.css"/>
+<link rel="stylesheet" href="Start/jquery-ui.structure.css"/>
+<link rel="stylesheet" href="Start/jquery-ui.theme.css"/>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="./Start/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#date1").datepicker({
+			dateFormat: "yy-mm-dd",
+			monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+			dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+			showOn:"button"
+		});	//날짜선택기
+		
+		$("#date2, #date3").datepicker({
+			dateFormat: "yy-mm-dd",
+			monthNames: ["1월", "3월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+			dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+			showOn:"button",
+			buttonText: "📆"
+		});	
+		
+		$("#btn").click(function(){
+			$("#resultDate").text($("#date1").val());
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		날짜 선택 : <input type="text" id="date1"/>
+		<br/><br/>
+		
+		조회 기간 : <input type="text" id="date2"/>
+		~ <input type="text" id="date3"/>
+		<br/><br/>
+	</div>
+	<br/><br/>
+	
+	<button id="btn">클릭</button>
+	<br/><br/>
+	
+	<div id="resultDate"></div>
+</body>
+</html>

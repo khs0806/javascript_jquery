@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jQuery 이벤트</title>
+<style type="text/css">
+	body{
+		font-size:12px;
+		cursor:pointer;
+	}
+</style>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("input:eq(0)").val("아이디를 반드시 입력하세요.").css("color", "red");
+		$("input:eq(1)").val("이름을 반드시 입력하세요.").css("color", "red");
+		
+		$("input[type='text']").focus(function(){
+			$(this).val("").css("color", "#000");
+		});
+		
+		$("input:eq(0)").blur(function(){
+			if($("input:eq(0)").val()==""){
+				$("input:eq(0)").val("아이디를 반드시 입력하세요.").css("color", "blue");
+			}
+		});
+		
+		$("input:eq(1)").blur(function(){
+			if($("input:eq(1)").val()==""){
+				$("input:eq(1)").val("이름 반드시 입력하세요.").css("color", "blue");
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<form>
+		<input type="text" name="id"/><br/><br/>
+		<input type="text" name="name"/><br/><br/>
+		
+		<input type="button" value="전송" />
+		<input type="reset" value="취소"/>
+	</form>
+</body>
+</html>
